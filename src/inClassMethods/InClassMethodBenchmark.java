@@ -30,18 +30,18 @@ public class InClassMethodBenchmark {
 
         //test outClass
         for (int i = 0; i < samples / 2; i++) {
-            outClassTimes[i] = new OutClass().outClassTimes(samples);
+            outClassTimes[i] = new OutClass().outClassTimes(iterations);
         }
 
         //test outClassWV
         OutClass OutClass = new OutClass();
         for (int i = 0; i < samples / 2; i++) {
-            outClassWVTimes[i] = OutClass.outClassTimes(samples);
+            outClassWVTimes[i] = OutClass.outClassTimes(iterations);
         }
 
         //test outClassStatic
         for (int i = 0; i < samples / 2; i++) {
-            outClassStaticTimes[i] = inClassMethods.OutClass.outClassStaticTimes(samples);
+            outClassStaticTimes[i] = inClassMethods.OutClass.outClassStaticTimes(iterations);
         }
 
         //test outMethod 2
@@ -58,18 +58,18 @@ public class InClassMethodBenchmark {
 
         //test outClass 2
         for (int i = samples / 2; i < samples; i++) {
-            outClassTimes[i] = new OutClass().outClassTimes(samples);
+            outClassTimes[i] = new OutClass().outClassTimes(iterations);
         }
 
         //test outClassWV 2
         OutClass OutClass2 = new OutClass();
         for (int i = samples / 2; i < samples; i++) {
-            outClassWVTimes[i] = OutClass2.outClassTimes(samples);
+            outClassWVTimes[i] = OutClass2.outClassTimes(iterations);
         }
 
         //test outClassStatic 2
         for (int i = samples / 2; i < samples; i++) {
-            outClassStaticTimes[i] = inClassMethods.OutClass.outClassStaticTimes(samples);
+            outClassStaticTimes[i] = inClassMethods.OutClass.outClassStaticTimes(iterations);
         }
 
         //return:
