@@ -2,6 +2,9 @@ import inClassMethods.InClassMethodBenchmark;
 
 public class Main {
     public static void main(String[] args) {
-        new InClassMethodBenchmark();
+        for (int i = 0; i < 10; i++) {
+            new InClassMethodBenchmark();
+            System.out.println();
+        }
     }
 }
